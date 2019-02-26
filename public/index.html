@@ -6,11 +6,127 @@
     <title>Rotten Tomatoes</title>
   </head>
   <body>
-    <link rel="stylesheet"
-    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
-    integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
-    crossorigin="anonymous" />
-    <link rel='stylesheet' type='text/css' href="/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <div id='header-main'>
+      <nav class="navbar navbar-inverse">
+        <div class="container">
+          <div class="navbar-header col-sm-13 col-full-xs">
+            <a class="navbar-brand" href="#">
+              <img alt="rt" src="img/rtlogo.png" width=166px>
+            </a>
+          </div>
+          <form class="navbar-form navbar-left" action="/action_page.php">
+            <div class="input-group">
+              <input type="text" class="form-control" autocomplete="off" placeholder="Search movies, TV, actors, more...">
+              <div class="input-group-btn">
+                <button class="btn btn-default" type="submit">
+                  <i class="glyphicon glyphicon-search"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+          <div class="nav navbar-header pull-right hidden-xs">
+            <div class="header-links">
+              <a href="#">What's the Tomatometer®?</a>
+              <a href="#">Critics</a>
+              <a href="#">Sign Up</a> |
+              <a href="#">Login</a>
+            </div>
+          </div>
+          <div class="navbar-nav hidden-xs">
+            <ul class="nav navbar-nav">
+              <li><a href="#">Movies & DVDS</a></li>
+              <li><a href="#">TV</a></li>
+              <li><a href="#">News</a></li>
+              <li><a href="#">Tickets & Showtimes</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div id="main_container" class="main-container">
+      <aside class="col mob col-right">
+        <div id="movies_sidebar">
+          <nav id="main_movie_sidebar">
+            <div class="tab-header"></div>
+              <div class="tab-content">
+                <h3>opening</h3>
+                <table class="movie_list opening">
+                  <tbody>
+                    <tr>
+                      <td class="left_col"><a href="#"><span><img class="icon tiny" src="/img/certified_fresh.png"></span><span class="rtMeterScore">91%</span></a></td>
+                      <td class="mid_col"><a href="#"><span>How to Train Your Dragon: The Hidden World</span></a></td>
+                      <td class="right_col"><a href="#"><span>Feb 22</span></a></td>
+                    </tr>
+                    <tr>
+                      <td class="left_col"><a href="#"><span><img class="icon tiny" src="/img/certified_fresh.png"></span><span class="rtMeterScore">91%</span></a></td>
+                      <td class="mid_col"><a href="#"><span>Fighting with My Family</span></a></td>
+                      <td class="right_col"><a href="#"><span>Feb 22</span></a></td>
+                    </tr>
+                    <tr>
+                      <td class="left_col"><a href="#"><span><img class="icon tiny" src="/img/fresh.png"></span><span class="rtMeterScore">77%</span></a></td>
+                      <td class="mid_col"><a href="#"><span>The Changeover</span></a></td>
+                      <td class="right_col"><a href="#"><span>Feb 22</span></a></td>
+                    </tr>
+                    <tr>
+                      <td class="left_col"><a href="#"><span><img class="icon tiny" src="/img/rotten.png"></span><span class="rtMeterScore">17%</span></a></td>
+                      <td class="mid_col"><a href="#"><span>The Iron Orchard</span></a></td>
+                      <td class="right_col"><a href="#"><span>Feb 22</span></a></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="showAll"><a href="#">View All</a></div>
+              </div>
+              <div class="tab-header"></div>
+              <div class="tab-content">
+                <h3>top box office</h3>
+                <table class="movie_list top_box_office">
+                  <tbody>
+                    <tr>
+                      <td class="left_col"><a href="#"><span><img class="icon tiny" src="/img/rotten.png"></span><span class="rtMeterScore">59%</span></a></td>
+                      <td class="mid_col"><a href="#"><span>Alita: Battle Angel</span></a></td>
+                      <td class="right_col"><a href="#"><span>$33.5M</span></a></td>
+                    </tr>
+                    <tr>
+                      <td class="left_col"><a href="#"><span><img class="icon tiny" src="/img/certified_fresh.png"></span><span class="rtMeterScore">86%</span></a></td>
+                      <td class="mid_col"><a href="#"><span>The Lego Movie 2: The Second Part</span></a></td>
+                      <td class="right_col"><a href="#"><span>$27.9M</span></a></td>
+                    </tr>
+                    <tr>
+                      <td class="left_col"><a href="#"><span><img class="icon tiny" src="/img/fresh.png"></span><span class="rtMeterScore">68%</span></a></td>
+                      <td class="mid_col"><a href="#"><span>Isn't It Romantic</span></a></td>
+                      <td class="right_col"><a href="#"><span>$16.6M</span></a></td>
+                    </tr>
+                    <tr>
+                      <td class="left_col"><a href="#"><span><img class="icon tiny" src="/img/rotten.png"></span><span class="rtMeterScore">68%</span></a></td>
+                      <td class="mid_col"><a href="#"><span>What Men Want</span></a></td>
+                      <td class="right_col"><a href="#"><span>$12.3M</span></a></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="showAll">
+                  <a href="#">View All</a>
+                </div>
+              </div>
+          </nav>
+        </div>
+      </aside>
+      <div class="mainCol col-center-right">
+        <div id="">
+        <!-- <div id="showtime"></div> -->
+        <div id="audience-reviews"></div>
+      </div>
+    </div>
   </body>
+    <script type="text/javascript" src="http://localhost:9003/bundle.js"></script>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+    <link rel='stylesheet' type='text/css' href="/style.css">
+    <link rel='stylesheet' type='text/css' href="http://localhost:9003/style.css">
+    <link rel='stylesheet' type='text/css' href="./postStyle.css">
+    <script type="text/javascript" src="http://localhost:9003/toggle.js"></script>
+    <!-- <script src="http://localhost:9002/build.js"></script>
+    <script src="http://localhost:9002/build.js.map"></script> -->
 </html>
