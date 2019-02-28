@@ -13,8 +13,14 @@ body {
 }
 .container, .navbar-inverse {
   width: 1100px;
-  margin: 0 auto;
-  height: 86px;
+  margin: -3px;
+  height: 94px;
+}
+@media screen and (max-width: 1100px) {
+  .container, .navbar-inverse  {
+    width: 100%;
+
+  }
 }
 .navbar {
   background-color: #fa320a;
@@ -22,6 +28,11 @@ body {
   margin: 0 auto;
   font-family: 'FGMed', 'Helvetica';
   color: #fff;
+
+}
+.navbar .container, .navbar .container-fluid {
+  /* justify-content: start !important; */
+  flex-wrap: nowrap;
 }
 .navbar a {
   color: #fff;
@@ -40,9 +51,19 @@ body {
 .navbar-header {
   font-size: 14px;
 }
-.input-group {
-  display: table;
-  border-collapse: separate;
+.btn {
+  float: right;
+  padding: 0 !important;
+  margin: 0 !important;
+  height: 34px;
+  width: 34px;
+  border-radius: 0 5px 5px 0 !important;
+}
+.fa-search:before {
+  margin-right: 7px;
+}
+.btn i {
+  text-align:center;
 }
 .navbar-inverse {
   border-color: #fa320a;
@@ -55,13 +76,15 @@ body {
   position: static;
   width: 100%;
 }
+.input-group {
+  flex-wrap: nowrap !important;
+}
 .navbar-form {
   min-height: 50px;
   width: 36%;
   padding: 16px 12px;
   border: none;
 }
-
 .form-control {
   height: 34px;
   padding: 10px 12px;
@@ -72,22 +95,32 @@ body {
   font-size: 14px;
   line-height: 1.25;
   color: #555;
-  width: 327px !important;
+  width: 306px !important;
   font-family: "FGBook";
   font-weight: 100;
 }
 
-
+.navbar .container, .navbar .container-fluid {
+  align-items: flex-start !important;
+}
 .navbar.navbar-rt .navbar-searchbox .input-group #search-term {
   border: none;
   box-shadow: none;
   width: 100%;
 }
-
+.navbar-nav {
+  flex-direction: row !important;
+  width: 417px;
+}
 .navbar.navbar-rt .navbar-header .header-links {
-  float: right;
+  float: right !important;
   vertical-align: middle;
   position: relative;
+  padding: 4px 2px;
+}
+.nav {
+  justify-content: flex-end;
+  width: 480px;
 }
 
 .navbar-brand {
