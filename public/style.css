@@ -1,0 +1,274 @@
+@font-face {
+  font-family: "FGMed";
+  src: url("fonts/FrankMed.ttf") format("truetype")
+}
+@font-face {
+  font-family: "FGBook";
+  src: url("fonts/FrankBook.ttf") format("truetype")
+}
+
+html, body {
+  color: #343434;
+  background-color: #EEE;
+  height: 100%;
+  width: 100%;
+}
+.container, .navbar-inverse {
+  max-width: 100%;
+  width: 1100px;
+  margin: -3px;
+  height: 94px;
+}
+.fa-bars {
+  visibility: hidden;
+  margin: 0;
+}
+@media screen and (max-width: 767px) {
+  .navbar, .navbar-inverse {
+    width: 100%;
+  }
+  .nav {
+    visibility: hidden;
+    width: 0;
+  }
+  .fa-bars {
+    visibility: visible;
+    width: 40px;
+    height: 40px;
+    font-size: 40px;
+    margin-top: 15px;
+  }
+  aside {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+  }
+  #main_container {
+    width: 100%;
+  }
+  #mob-view {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+  }
+  .container {
+    padding: 0;
+  }
+}
+.navbar {
+  background-color: #fa320a;
+  border-radius: 0;
+  margin: 0 auto;
+  font-family: 'FGMed', 'Helvetica';
+  color: #fff;
+
+}
+.navbar .container, .navbar .container-fluid {
+  /* justify-content: start !important; */
+  flex-wrap: nowrap;
+}
+.navbar a {
+  color: #fff;
+  font-size: 14px;
+  padding: 2px 6px;
+}
+.navbar-inverse .navbar-nav li a {
+  color: #fff;
+  display: block;
+  margin: 0;
+  padding: 14px 10px 17px;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 400;
+}
+.navbar-header {
+  font-size: 14px;
+}
+.btn {
+  float: right;
+  padding: 0 !important;
+  margin: 0 !important;
+  height: 34px;
+  width: 34px;
+  border-radius: 0 5px 5px 0 !important;
+}
+.fa-search:before {
+  margin-right: 7px;
+}
+.btn i {
+  text-align:center;
+}
+.btn-primary {
+  background-color: #FFF;
+  border-color: #FFF;
+  color: #000;
+}
+.navbar-inverse {
+  border-color: #fa320a;
+}
+.navbar.navbar-rt .navbar-searchbox .input-group {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  position: static;
+  width: 100%;
+}
+.input-group {
+  flex-wrap: nowrap !important;
+}
+.navbar-form {
+  min-height: 50px;
+  width: 36%;
+  padding: 16px 12px;
+  border: none;
+}
+.form-control {
+  height: 34px;
+  padding: 10px 12px;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 1.25;
+  color: #555;
+  width: 306px !important;
+  font-family: "FGBook";
+  font-weight: 100;
+}
+
+.navbar .container, .navbar .container-fluid {
+  align-items: flex-start !important;
+}
+.navbar.navbar-rt .navbar-searchbox .input-group #search-term {
+  border: none;
+  box-shadow: none;
+  width: 100%;
+}
+.navbar-nav {
+  flex-direction: row !important;
+  width: 417px;
+}
+.navbar.navbar-rt .navbar-header .header-links {
+  float: right !important;
+  vertical-align: middle;
+  position: relative;
+  padding: 4px 2px;
+}
+.nav {
+  justify-content: flex-end;
+  width: 480px;
+}
+
+.navbar-brand {
+  float: left;
+}
+a:link {
+  text-decoration: none;
+}
+
+/* main container */
+.main-container {
+  background-color: #fff;
+  padding: 0;
+  margin: -10px auto;
+  position: relative;
+  width: 1100px;
+}
+#movies_sidebar, .mob.col-right #movies_sidebar {
+  position: relative;
+  width: 300px;
+}
+#movies_sidebar {
+  margin: 10px 0;
+}
+#main_movie_sidebar {
+  border: 1px solid #ddd;
+}
+
+.icon.tiny {
+  height: 16px;
+  margin-bottom: 3px;
+  width: 16px;
+  margin-right: 5px;
+}
+
+.movie_list {
+  line-height: 12px;
+  margin-top: 10px;
+  max-width: 100%;
+  table-layout: fixed;
+  width: 100%;
+}
+#movies_sidebar .tab-content {
+  height: auto;
+  margin: 0 10px;
+}
+#movies_sidebar .tab-content td.left_col {
+  width: 60px;
+}
+.movie_list tr .mid_col {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: auto;
+  padding-left: 5px;
+}
+.movie_list tr .mid_col a {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-decoration: none;
+}
+#movies_sidebar .tab-content td.right_col {
+  padding: 5px;
+  font-family: 'FGMed',sans-serif;
+  font-size: 14px;
+}
+
+.movie_list tr .right_col {
+  color: #545454;
+  padding: 0 5px;
+  text-align: right;
+  text-transform: uppercase;
+  width: 65px;
+}
+
+a {
+  color: #343434;
+}
+
+#movies_sidebar .showAll {
+  text-align: left!important;
+  font-size: 14px;
+  width: 100%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  margin-bottom: 4px;
+}
+
+#movies_sidebar .tab-content h3 {
+  font-family: sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: -1;
+  color: #000!important;
+  padding-top: 3px;
+  margin: 8px 0;
+  text-transform: uppercase;
+  width: 330px;
+}
+
+.mainCol {
+  width: 770px;
+  border: none;
+  overflow: hidden;
+}
+.mob.col-right {
+  width: 300px;
+}
+.col-right {
+  float: left;
+  min-height: 1px;
+  position: relative;
+}

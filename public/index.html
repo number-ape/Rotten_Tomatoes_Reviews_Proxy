@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rotten Tomatoes</title>
+  </head>
+  <body>
+    <div id='header-main'>
+      <nav class="navbar navbar-inverse">
+        <div class="container">
+          <div class="navbar-header col-sm-13 col-full-xs">
+            <a class="navbar-brand" href="#">
+              <img alt="rt" src="/img/rtlogo.png" width=166px>
+            </a>
+          </div>
+          <form class="navbar-form navbar-left" action="/action_page.php">
+            <div class="input-group">
+              <input type="text" class="form-control" autocomplete="off" placeholder="Search movies, TV, actors, more...">
+              <div class="input-group-btn">
+                <button class="btn btn-primary" type="submit">
+                  <i class="fas fa-search"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+          <div id="mob-view" class="nav navbar-header pull-right hidden-xs">
+            <div class="header-links">
+              <a href="#">What's the Tomatometer®?</a>
+              <a href="#">Critics</a>
+              <a href="#">Sign Up</a> |
+              <a href="#">Login</a>
+            </div>
+            <div id="mob-view" class="navbar-nav hidden-xs">
+              <ul class="nav navbar-nav">
+                <li><a href="#">Movies & DVDS</a></li>
+                <li><a href="#">TV</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Tickets & Showtimes</a></li>
+              </ul>
+            </div>
+          </div>
+          <i class="fas fa-bars"></i>
+        </div>
+      </nav>
+      
+    </div>
+    <div id="main_container" class="main-container">
+      <aside class="col mob col-right">
+        <div id="movies_sidebar">
+          <nav id="main_movie_sidebar">
+            <div class="tab-header"></div>
+              <div class="tab-content">
+                <h3>opening</h3>
+                <table class="movie_list opening">
+                  <tbody>
+                    <tr>
+                      <td class="left_col"><a href="#"><span><img class="icon tiny" src="/img/certified_fresh.png"></span><span class="rtMeterScore">91%</span></a></td>
+                      <td class="mid_col"><a href="#"><span>How to Train Your Dragon: The Hidden World</span></a></td>
+                      <td class="right_col"><a href="#"><span>Feb 22</span></a></td>
+                    </tr>
+                    <tr>
+                      <td class="left_col"><a href="#"><span><img class="icon tiny" src="/img/certified_fresh.png"></span><span class="rtMeterScore">91%</span></a></td>
+                      <td class="mid_col"><a href="#"><span>Fighting with My Family</span></a></td>
+                      <td class="right_col"><a href="#"><span>Feb 22</span></a></td>
+                    </tr>
+                    <tr>
+                      <td class="left_col"><a href="#"><span><img class="icon tiny" src="/img/fresh.png"></span><span class="rtMeterScore">77%</span></a></td>
+                      <td class="mid_col"><a href="#"><span>The Changeover</span></a></td>
+                      <td class="right_col"><a href="#"><span>Feb 22</span></a></td>
+                    </tr>
+                    <tr>
+                      <td class="left_col"><a href="#"><span><img class="icon tiny" src="/img/rotten.png"></span><span class="rtMeterScore">17%</span></a></td>
+                      <td class="mid_col"><a href="#"><span>The Iron Orchard</span></a></td>
+                      <td class="right_col"><a href="#"><span>Feb 22</span></a></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="showAll"><a href="#">View All</a></div>
+              </div>
+              <div class="tab-header"></div>
+              <div class="tab-content">
+                <h3>top box office</h3>
+                <table class="movie_list top_box_office">
+                  <tbody>
+                    <tr>
+                      <td class="left_col"><a href="#"><span><img class="icon tiny" src="/img/rotten.png"></span><span class="rtMeterScore">59%</span></a></td>
+                      <td class="mid_col"><a href="#"><span>Alita: Battle Angel</span></a></td>
+                      <td class="right_col"><a href="#"><span>$33.5M</span></a></td>
+                    </tr>
+                    <tr>
+                      <td class="left_col"><a href="#"><span><img class="icon tiny" src="/img/certified_fresh.png"></span><span class="rtMeterScore">86%</span></a></td>
+                      <td class="mid_col"><a href="#"><span>The Lego Movie 2: The Second Part</span></a></td>
+                      <td class="right_col"><a href="#"><span>$27.9M</span></a></td>
+                    </tr>
+                    <tr>
+                      <td class="left_col"><a href="#"><span><img class="icon tiny" src="/img/fresh.png"></span><span class="rtMeterScore">68%</span></a></td>
+                      <td class="mid_col"><a href="#"><span>Isn't It Romantic</span></a></td>
+                      <td class="right_col"><a href="#"><span>$16.6M</span></a></td>
+                    </tr>
+                    <tr>
+                      <td class="left_col"><a href="#"><span><img class="icon tiny" src="/img/rotten.png"></span><span class="rtMeterScore">68%</span></a></td>
+                      <td class="mid_col"><a href="#"><span>What Men Want</span></a></td>
+                      <td class="right_col"><a href="#"><span>$12.3M</span></a></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="showAll">
+                  <a href="#">View All</a>
+                </div>
+              </div>
+          </nav>
+        </div>
+      </aside>
+      <div class="mainCol col-center-right">
+        <!-- <app-root></app-root> -->
+        <!-- <div id="showtime"></div> -->
+        <critics></critics>
+        <div id="addmobilerating"></div>
+        <div id="post-reviews"></div>
+        <div id="audience-reviews"></div>
+        <div id="all-audience-reviews" style="display:none"></div>
+      </div>
+    </div>
+  </body>
+    <!-- <script defer type="text/javascript" src="http://localhost:9001/runtime.js"></script>
+    <script defer type="text/javascript" src="http://localhost:9001/es2015-polyfills.js" nomodule></script>
+    <script defer  type="text/javascript" src="http://localhost:9001/polyfills.js"></script>
+    <script defer type="text/javascript" src="http://localhost:9001/styles.js"></script>
+    <script defer type="text/javascript" src="http://localhost:9001/vendor.js"></script>
+    <script defer type="text/javascript" src="http://localhost:9001/main.js"></script> -->
+    
+    <link async rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous"/>
+    <link async rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script defer type="text/javascript" src="http://localhost:9003/bundle.js"></script>
+    <script async src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link async rel='stylesheet' type='text/css' href="http://localhost:9000/style.css">
+    <link async rel='stylesheet' type='text/css' href="http://localhost:9003/style.css">
+    <link async rel='stylesheet' type='text/css' href="http://localhost:9003/postStyle.css">
+
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+    <!-- <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script> -->
+    <!-- <script async src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+    <!-- <script async src="//unpkg.com/babel-polyfill@latest/dist/polyfill.min.js"></script> -->
+    <!-- <script async src="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.js"></script> -->
+    <!-- <link async rel='stylesheet' type='text/css' href="http://localhost:9002/custom.css"> -->
+    <!-- <script defer src="http://localhost:9002/build.js"></script> -->
+    <!-- <script defer src="http://localhost:9002/build.js.map"></script> -->
+</html>
